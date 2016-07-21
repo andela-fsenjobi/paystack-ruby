@@ -1,4 +1,5 @@
 require "paystack/objects/base.rb"
+require "json"
 
 class PaystackCustomers < PaystackBaseObject
   def create(data = {})

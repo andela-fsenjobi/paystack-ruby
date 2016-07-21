@@ -34,11 +34,8 @@ class PaystackCard
   def self.getCardType(number)
     return "invalid" if number.nil?
     return "visa" if (number =~ PATTERN_VISA) != nil
-
     return "mastercard" if (number =~ PATTERN_MASTERCARD) != nil
-
     return "american_express" if (number =~ PATTERN_AMERICAN_EXPRESS) != nil
-
     return "diners" if number =~ PATTERN_DINERS_CLUB
     return "discover" if number =~ PATTERN_DISCOVER
     return "jcb" if number =~ PATTERN_JCB

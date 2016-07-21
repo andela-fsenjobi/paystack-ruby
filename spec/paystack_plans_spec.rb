@@ -54,7 +54,7 @@ describe PaystackPlans do
       currency: "NGN"
 
     )
-    puts hash
+    # puts hash
     expect(hash.nil?).to eq false
     expect(hash["data"]["id"].nil?).to eq false
   end
@@ -73,7 +73,7 @@ describe PaystackPlans do
       currency: "NGN"
 
     )
-    puts hash
+    # puts hash
     expect(hash.nil?).to eq false
     expect(hash["data"]["id"].nil?).to eq false
   end

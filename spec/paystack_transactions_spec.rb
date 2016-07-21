@@ -45,7 +45,7 @@ describe PaystackTransactions do
       email: "xxxrr@gmail.com",
       amount: 30_000
     )
-    puts temp
+    # puts temp
     expect(temp.nil?).to eq false
     expect(temp["data"]["authorization_url"].nil?).to eq false
   end

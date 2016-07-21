@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
 
   # Dependencies
   spec.add_dependency "rest-client", "~> 1.8"
+  spec.add_dependency "json"
 end

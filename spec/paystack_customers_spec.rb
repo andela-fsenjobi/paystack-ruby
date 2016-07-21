@@ -9,7 +9,7 @@ describe PaystackCustomers do
   it "should return a valid customers object" do
     paystack = Paystack.new(public_test_key, private_test_key)
     customers = PaystackCustomers.new(paystack)
-    expect(customers.nil?).to eq false
+    expect(customers).not_to be false
   end
 
   it "should return a list of customers" do
@@ -18,7 +18,7 @@ describe PaystackCustomers do
     expect(customers.nil?).to eq false
     list = customers.list(1)
     # puts list
-    expect(list.nil?).to eq false
+    expect(list).not_to be nil
   end
 
   it "should return a customer hashset/object" do
@@ -57,7 +57,7 @@ describe PaystackCustomers do
     expect(customers.nil?).to eq false
     temp = Random.new_seed.to_s
     hash = customers.create(first_name: "#{temp[0..6]}-person", last_name: "Ogbonge", phone: "+23470#{temp[0..6]}", email: "#{temp[0..6]}@gmail.com")
-    puts hash
+    # puts hash
     expect(hash.nil?).to eq false
     expect(hash["data"]["id"].nil?).to eq false
   end

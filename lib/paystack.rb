@@ -13,7 +13,6 @@ class Paystack
   def initialize(paystack_public_key = nil, paystack_private_key = nil)
     @public_key = if paystack_public_key.nil?
                     ENV["PAYSTACK_PUBLIC_KEY"]
-
                   else
                     paystack_public_key
                   end
@@ -43,7 +42,7 @@ class Paystack
     @public_key = public_key
   end
 
-  def setPrivateKey(public_key)
-    @public_key = public_key
+  def setPrivateKey(private_key)
+    @private_key = private_key
   end
 end
